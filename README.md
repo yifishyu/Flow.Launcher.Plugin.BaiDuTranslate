@@ -1,4 +1,4 @@
-# Flow.Launcher.Translation
+# Flow.Launcher.Plugin.BaiDuTranslate
 
 ## 描述
 
