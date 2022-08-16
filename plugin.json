@@ -1,0 +1,12 @@
+{
+    "ID": "19921b78-63ac-43ab-a278-59a5a2126dd8",
+    "ActionKeyword": "fy",
+    "Name": "BaiDu Translate",
+    "Description": "Translate Plugin",
+    "Author": "BinLi",
+    "Version": "0.0.1",
+    "Language": "python",
+    "Website": "https://github.com/yifishyu/Flow.Launcher.Plugin.BaiDuTranslate",
+    "IcoPath": "assets/translate.png",
+    "ExecuteFileName": "main.py"
+}
