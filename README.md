@@ -1,52 +1,33 @@
-# Currency Converter (Flow.Launcher.Plugin.Currency)
+# Flow.Launcher.Translation
 
-Currency conversion for the [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher)
+## 描述
 
-![screenshot](assets/cc_screenshot.png)
+一款使用在Flow Launcher中的翻译插件(当前只支持百度翻译中英互译)
 
-### About
+## 使用方法
 
-Uses the [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html) daily rates to get and convert currency exchange rates.
+## 安放位置
 
-Currency code that can be used are:
+将下载得到的 zip 文件解压后得到的文件放在 %AppData%/FlowLauncher/Plugins 目录下，之后重启Flow Launcher，最后在插件选项中开启该插件
 
-'AUD' , 'BGN' , 'BRL' , 'CAD' , 'CHF' , 'CNY' , 'CZK' , 'DKK' , 'GBP', 'HKD' , 'HRK' , 'HUF' , 'IDR' , 'ILS' , 'INR' , 'ISK' , 'JPY' , 'KRW', 'MXN', 'MYR' , 'NOK' , 'NZD' , 'PHP' , 'PLN' , 'RON' , 'RUB' , 'SEK', 'SGD' , 'THB' , 'TRY' , 'USD' , 'ZAR' , 'EUR'
+### 注册
 
-### Requirements
+在[百度翻译开放平台]([百度翻译开放平台](https://fanyi-api.baidu.com/product/11))中注册成为使用者，获取百度翻译的 appid 和 key
 
-Flow Launcher should take care of the installation of Python for you if it is not on your system, as well as the libraries needed by this plugin.
+### 配置
 
-You must be online when you run the plugin in Flow to download the currency XML file, or you will get a connection error. A local copy of the local XML file froma previous download can be used if it exists.
+在插件的目录下的 `config.js` 文件中填写你的 appid 和 key，如果没有配置，第一次也会弹出配置文件，可以进行编辑
 
-### Plugin Settings
+![config](https://i.postimg.cc/JhT1kVhy/config.png)
 
-Type `settings` in Flow to access the settings window, then go to Plugins - Currency Converter
+### 使用
 
-__Keyword (default 'cc')__ - change this to set a new keyword to activate the plugin
+中译英，`fy 苹果`
 
-__File age (default 6)__ - the age in hours for the local copy of the rates file to be used before the plugin downloads a fresh copy
+![中译英](https://i.postimg.cc/Kzy10y20/zhToEn.png)
 
+英译中， `fy apple`
 
-### Installing
+![英译中](https://i.postimg.cc/tgn6r5V4/entozh.png)
 
-#### Package Manager
-
-Use the `pm install` command from within Flow itself.
-
-### Localisation
-
-Currently English and Chinese language supported. Edit the .env file to change the language.
-
-### Usage
-
-| Keyword                                                          | Description                                 |
-| ---------------------------------------------------------------- | ------------------------------------------- |
-| `cc {amount} {source currency code} {destination currency code}` | Convert amount from source to dest currency |
-
-When typing the source or destination currency the plugin will show what currencies are available.
-
-Decimal precision is based on the input amount however the base rate is always a minimum of three decimal places.
-
-### Problems, errors and feature requests
-
-Open an issue in this repo.
+目前只支持中英互译， 且只能翻译单个词或单个句子
